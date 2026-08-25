@@ -1,0 +1,44 @@
+.customers-say {
+  text-align: center;
+}
+
+.customers-say h2 {
+  color: #1a1a1a;
+}
+
+.testimonial-cards {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.testimonial-card {
+  flex: 1 1 220px;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  padding: 20px;
+  transition: transform 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+}
+
+.stars {
+  color: #e6501e;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.review-text {
+  font-style: italic;
+  color: #495057;
+}
+
+.reviewer-name {
+  font-weight: 700;
+  color: #1a1a1a;
+}

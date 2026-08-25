@@ -1,0 +1,57 @@
+.booking-form {
+  display: grid;
+  max-width: 320px;
+  margin: 0 auto;
+  gap: 16px;
+  background-color: #f8f8f8;
+  padding: 32px;
+  border-radius: 16px;
+}
+
+.booking-form label {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.booking-form input,
+.booking-form select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Karla', sans-serif;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+  outline: none;
+  border-color: #e6501e;
+}
+
+.booking-form input[type="submit"] {
+  background-color: #e6501e;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 12px;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.booking-form input[type="submit"]:hover {
+  background-color: #c73f13;
+  transform: translateY(-2px);
+}
+
+.field-error {
+  color: #c73f13;
+  font-size: 0.85rem;
+  margin-top: -8px;
+}
+
+.booking-form input[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}

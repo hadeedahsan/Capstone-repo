@@ -1,0 +1,41 @@
+.chicago {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.chicago-text h2 {
+  color: #1a1a1a;
+}
+
+.chicago-text h3 {
+  color: #e6501e;
+}
+
+.chicago-text {
+  flex: 1 1 300px;
+}
+
+.chicago-img-1,
+.chicago-img-2 {
+  width: 200px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.chicago-img-1:hover,
+.chicago-img-2:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .chicago {
+    flex-direction: column;
+    text-align: center;
+  }
+  .chicago-img-1,
+  .chicago-img-2 {
+    width: 45%;
+  }
+}

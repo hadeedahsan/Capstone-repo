@@ -11,6 +11,7 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
   const [time, setTime] = useState(availableTimes[0]);
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState("Birthday");
+  const [submitError, setSubmitError] = useState(false);
 
   const handleDateChange = (e) => {
     const selectedDate = e.target.value;
@@ -22,7 +23,10 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
     e.preventDefault();
     if (!isFormValid) return;
     const formData = { date, time, guests, occasion };
-    submitForm(formData);
+    const success = submitForm(formData);
+    if (!success) {
+      setSubmitError(true);
+    }
   };
 
   const isDateValid = date !== "" && date >= getToday();
@@ -89,7 +93,12 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
         <option>Birthday</option>
         <option>Anniversary</option>
       </select>
-
+      
+      {submitError && (
+  <span className="field-error" role="alert">
+    Something went wrong submitting your reservation. Please try again.
+  </span>
+)}
       <input type="submit" value="Make Your Reservation" disabled={!isFormValid} />
     </form>
   );

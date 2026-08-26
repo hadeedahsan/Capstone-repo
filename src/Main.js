@@ -4,6 +4,7 @@ import "./Main.css";
 import Homepage from "./Homepage";
 import BookingPage from "./BookingPage";
 import ConfirmedBooking from "./ConfirmedBooking";
+import NotFound from "./NotFound";
 
 /* global fetchAPI, submitAPI */
 
@@ -29,6 +30,7 @@ function Main() {
     if (success) {
       navigate("/confirmed");
     }
+    return success;
   };
 
   return (
@@ -46,6 +48,7 @@ function Main() {
           }
         />
         <Route path="/confirmed" element={<ConfirmedBooking />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </main>
   );

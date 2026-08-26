@@ -1,0 +1,14 @@
+.not-found {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.not-found h1 {
+  color: #e6501e;
+}
+
+.not-found-link {
+  color: #1a1a1a;
+  font-weight: 600;
+  text-decoration: underline;
+}

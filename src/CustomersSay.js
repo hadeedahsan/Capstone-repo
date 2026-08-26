@@ -28,7 +28,9 @@ function CustomersSay() {
       <div className="testimonial-cards">
         {testimonials.map((t) => (
           <div className="testimonial-card" key={t.id}>
-            <div className="stars">{"★".repeat(t.rating)}{"☆".repeat(5 - t.rating)}</div>
+            <div className="stars" aria-label={`${t.rating} out of 5 stars`}>
+  {"★".repeat(t.rating)}{"☆".repeat(5 - t.rating)}
+</div>
             <p className="review-text">"{t.review}"</p>
             <p className="reviewer-name">{t.name}</p>
           </div>

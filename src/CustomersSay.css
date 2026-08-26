@@ -1,5 +1,8 @@
 .customers-say {
   text-align: center;
+  background-color: #f4f2f2;
+  padding: 40px 20px;
+  border-radius: 16px;
 }
 
 .customers-say h2 {

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import "./Specials.css";
 import greekSalad from "./assets/greek-salad.png";
 import bruschetta from "./assets/bruschetta.png";
@@ -28,11 +29,19 @@ const specialsData = [
 ];
 
 function Specials() {
+  const navigate = useNavigate();
+
   return (
     <section className="specials" aria-labelledby="specials-heading">
       <div className="specials-header">
         <h2 id="specials-heading">This Week's Specials</h2>
-        <button className="menu-btn" type="button">Online Menu</button>
+        <button
+          className="menu-btn"
+          type="button"
+          onClick={() => navigate("/menu")}
+        >
+          Online Menu
+        </button>
       </div>
 
       <div className="specials-cards">

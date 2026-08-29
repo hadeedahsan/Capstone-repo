@@ -2,8 +2,8 @@ import { useReducer } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import "./Main.css";
 import { lazy, Suspense } from "react";
+import Homepage from "./Homepage";
 
-const Homepage = lazy(() => import("./Homepage"));
 const BookingPage = lazy(() => import("./BookingPage"));
 const ConfirmedBooking = lazy(() => import("./ConfirmedBooking"));
 const NotFound = lazy(() => import("./NotFound"));

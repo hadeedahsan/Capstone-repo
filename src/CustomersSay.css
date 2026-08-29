@@ -1,12 +1,12 @@
 .customers-say {
   text-align: center;
-  background-color: #f4f2f2;
+  background-color: var(--bg-card);
   padding: 40px 20px;
   border-radius: 16px;
 }
 
 .customers-say h2 {
-  color: #1a1a1a;
+   color: var(--text-primary);
 }
 
 .testimonial-cards {
@@ -19,7 +19,7 @@
 
 .testimonial-card {
   flex: 1 1 220px;
-  background-color: #f8f8f8;
+  background-color: var(--bg-card-alt);
   border-radius: 12px;
   padding: 20px;
   transition: transform 0.25s ease;
@@ -43,5 +43,5 @@
 
 .reviewer-name {
   font-weight: 700;
-  color: #1a1a1a;
+  color: var(--text-primary);
 }

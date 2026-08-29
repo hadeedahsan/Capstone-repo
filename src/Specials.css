@@ -34,7 +34,7 @@
 
 .card {
   flex: 1 1 250px;
-  background-color: #efeeee;
+  background-color: var(--bg-card);
   border-radius: 12px;
   padding: 16px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -64,7 +64,7 @@
 }
 
 .card h3 {
-  color: #1a1a1a;
+   color: var(--text-primary);
 }
 
 .card p:nth-of-type(1) {

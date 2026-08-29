@@ -5,7 +5,10 @@ import Homepage from "./Homepage";
 import BookingPage from "./BookingPage";
 import ConfirmedBooking from "./ConfirmedBooking";
 import NotFound from "./NotFound";
-
+import AboutPage from "./AboutPage";
+import MenuPage from "./MenuPage";
+import OrderPage from "./OrderPage";
+import LoginPage from "./LoginPage";
 /* global fetchAPI, submitAPI */
 
 export const initializeTimes = () => {
@@ -48,6 +51,10 @@ function Main() {
           }
         />
         <Route path="/confirmed" element={<ConfirmedBooking />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/menu" element={<MenuPage />} />
+        <Route path="/order" element={<OrderPage />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </main>

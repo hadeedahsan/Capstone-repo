@@ -1,0 +1,149 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: var(--bg-card-alt);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.login-tabs {
+  display: flex;
+  background-color: var(--bg-card);
+  border-radius: 30px;
+  padding: 4px;
+  margin-bottom: 24px;
+}
+
+.login-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  padding: 10px;
+  border-radius: 26px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #495057;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.login-tab.active {
+  background-color: #e6501e;
+  color: #fff;
+}
+
+.login-card h1 {
+  text-align: center;
+  color: var(--text-primary);
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.login-success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.login-form {
+  display: grid;
+  gap: 14px;
+}
+
+.login-form label {
+  font-weight: 600;
+   color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.login-form input {
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #e6501e;
+}
+
+.password-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-field input {
+  padding-right: 60px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #e6501e;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.field-error {
+  color: #c73f13;
+  font-size: 0.8rem;
+  margin-top: -8px;
+}
+
+.login-submit {
+  background-color: #e6501e;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background-color 0.25s ease;
+}
+
+.login-submit:hover:not(:disabled) {
+  background-color: #c73f13;
+}
+
+.login-submit:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.login-switch {
+  text-align: center;
+  margin-top: 18px;
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+.login-switch button {
+  background: none;
+  border: none;
+  color: #e6501e;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}

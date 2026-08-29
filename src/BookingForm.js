@@ -37,20 +37,20 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
     <form className="booking-form" onSubmit={handleSubmit}>
       <h2>Book Now</h2>
 
-      <label htmlFor="res-date">Choose date</label>
+            <label htmlFor="res-date">Choose date</label>
       <input
-  type="date"
-  id="res-date"
-  value={date}
-  min={getToday()}
-  required
-  aria-invalid={date !== "" && !isDateValid}
-  aria-describedby={date !== "" && !isDateValid ? "date-error" : undefined}
-  onChange={handleDateChange}
-/>
-{date !== "" && !isDateValid && (
-  <span className="field-error" id="date-error">Please choose today or a future date.</span>
-)}
+        type="date"
+        id="res-date"
+        value={date}
+        min={getToday()}
+        required
+        aria-invalid={date !== "" && !isDateValid}
+        aria-describedby={date !== "" && !isDateValid ? "date-error" : undefined}
+        onChange={handleDateChange}
+      />
+      {date !== "" && !isDateValid && (
+        <span className="field-error" id="date-error">Please choose today or a future date.</span>
+      )}
 
       <label htmlFor="res-time">Choose time</label>
       <select
@@ -66,22 +66,22 @@ function BookingForm({ availableTimes, dispatch, submitForm }) {
         ))}
       </select>
 
-      <label htmlFor="guests">Number of guests</label>
+            <label htmlFor="guests">Number of guests</label>
       <input
-  type="number"
-  id="guests"
-  placeholder="1"
-  min="1"
-  max="10"
-  required
-  value={guests}
-  aria-invalid={!isGuestsValid}
-  aria-describedby={!isGuestsValid ? "guests-error" : undefined}
-  onChange={(e) => setGuests(Number(e.target.value))}
-/>
-{!isGuestsValid && (
-  <span className="field-error" id="guests-error">Guests must be between 1 and 10.</span>
-)}
+        type="number"
+        id="guests"
+        placeholder="1"
+        min="1"
+        max="10"
+        required
+        value={guests}
+        aria-invalid={!isGuestsValid}
+        aria-describedby={!isGuestsValid ? "guests-error" : undefined}
+        onChange={(e) => setGuests(Number(e.target.value))}
+      />
+      {!isGuestsValid && (
+        <span className="field-error" id="guests-error">Guests must be between 1 and 10.</span>
+      )}
 
       <label htmlFor="occasion">Occasion</label>
       <select

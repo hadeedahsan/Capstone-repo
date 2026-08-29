@@ -23,7 +23,7 @@ function CallToAction() {
           Reserve a Table
         </button>
       </div>
-      <img src={signatureDish} alt="The Grill restaurant dish" className="hero-img" />
+      <img src={signatureDish} alt="The Grill restaurant dish" className="hero-img" width="300" height="300" />
     </section>
   );
 }

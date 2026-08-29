@@ -1,0 +1,14 @@
+# The Grill
+
+> A responsive React web app for The Grill, a family-owned Mediterranean restaurant in Chicago. Portfolio project demonstrating component architecture, routing, form validation, state management, accessibility, and testing.
+
+## Pages
+- Home: /
+- Menu: /menu
+- About: /about
+- Order Online: /order
+- Reservations: /reservations
+- Login: /login
+
+## Notes
+This is a frontend-only demo project. Booking and ordering flows are simulated (no real backend/payment processing).

@@ -1,14 +1,16 @@
 import { useReducer } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import "./Main.css";
-import Homepage from "./Homepage";
-import BookingPage from "./BookingPage";
-import ConfirmedBooking from "./ConfirmedBooking";
-import NotFound from "./NotFound";
-import AboutPage from "./AboutPage";
-import MenuPage from "./MenuPage";
-import OrderPage from "./OrderPage";
-import LoginPage from "./LoginPage";
+import { lazy, Suspense } from "react";
+
+const Homepage = lazy(() => import("./Homepage"));
+const BookingPage = lazy(() => import("./BookingPage"));
+const ConfirmedBooking = lazy(() => import("./ConfirmedBooking"));
+const NotFound = lazy(() => import("./NotFound"));
+const AboutPage = lazy(() => import("./AboutPage"));
+const MenuPage = lazy(() => import("./MenuPage"));
+const OrderPage = lazy(() => import("./OrderPage"));
+const LoginPage = lazy(() => import("./LoginPage"));
 /* global fetchAPI, submitAPI */
 
 export const initializeTimes = () => {
@@ -37,7 +39,8 @@ function Main() {
   };
 
   return (
-    <main className="main">
+        <main className="main">
+      <Suspense fallback={<div style={{ padding: "60px", textAlign: "center" }}>Loading...</div>}>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route
@@ -56,7 +59,8 @@ function Main() {
         <Route path="/order" element={<OrderPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<NotFound />} />
-      </Routes>
+            </Routes>
+      </Suspense>
     </main>
   );
 }
